@@ -464,12 +464,11 @@ function HeroSection() {
     <section
       id="hero"
       style={{
-        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         position: "relative",
         zIndex: 2,
-        padding: "100px 1.5rem 60px",
+        padding: "80px 1.5rem 0px",
       }}
     >
       <div
@@ -796,7 +795,7 @@ function AboutSection() {
       style={{
         position: "relative",
         zIndex: 2,
-        padding: "80px 1.5rem",
+        padding: "20px 1.5rem",
       }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -1554,7 +1553,6 @@ export default function App() {
   return (
     <div
       style={{
-        minHeight: "100vh",
         background: "var(--bg-main)",
         position: "relative",
       }}
