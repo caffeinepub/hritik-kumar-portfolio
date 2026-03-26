@@ -120,6 +120,14 @@
   }
 }
 
+/* Particle canvas */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Grain texture overlay */
 .grain-overlay {
   position: fixed;

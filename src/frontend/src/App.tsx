@@ -92,18 +92,32 @@ const skills = [
   },
 ];
 
-const certificates = [
+type Certificate = {
+  title: string;
+  issuer: string;
+  date: string;
+  image?: string;
+};
+const certificates: Certificate[] = [
   {
     title: "Software Development Processes & Methodologies",
-    issuer: "",
+    issuer: "Infosys Springboard",
     date: "Nov '25",
+    image:
+      "/assets/uploads/screenshot_2025-12-12_003539-019d28bc-36b5-75c9-8470-548fde5d253c-1.png",
   },
   {
     title: "Prompt Engineering",
     issuer: "Infosys Springboard",
     date: "Jul '25",
   },
-  { title: "ChatGPT Prompt Engineering", issuer: "Infosys", date: "Sep '25" },
+  {
+    title: "ChatGPT Prompt Engineering",
+    issuer: "Infosys",
+    date: "Sep '25",
+    image:
+      "/assets/uploads/screenshot_2025-12-12_003841-019d28b2-f105-72d9-8d7b-5c643d33c787-1.png",
+  },
   { title: "Object Oriented Programming", issuer: "LPU", date: "Jun '25" },
   { title: "DSA in C++", issuer: "Training", date: "May–Jun '25" },
 ];
@@ -1381,6 +1395,61 @@ function EducationSection() {
                   >
                     {c.date}
                   </span>
+                  {c.image && (
+                    <button
+                      type="button"
+                      onClick={() => window.open(c.image, "_blank")}
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #C2A878 0%, #8B6F47 100%)",
+                        border: "none",
+                        padding: "5px 12px",
+                        cursor: "pointer",
+                        flexShrink: 0,
+                        borderRadius: 20,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 5,
+                        color: "#FAF3E0",
+                        fontSize: "0.7rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.05em",
+                        transition: "all 0.25s ease",
+                        boxShadow: "0 2px 8px rgba(139,111,71,0.3)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow =
+                          "0 0 12px rgba(194,168,120,0.5)";
+                        e.currentTarget.style.transform = "scale(1.05)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow =
+                          "0 2px 8px rgba(139,111,71,0.3)";
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    >
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-label="View Certificate"
+                        role="img"
+                      >
+                        <title>View Certificate</title>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                      </svg>
+                      View Certificate
+                    </button>
+                  )}
                 </motion.div>
               ))}
             </div>
