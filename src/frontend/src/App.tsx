@@ -110,6 +110,8 @@ const certificates: Certificate[] = [
     title: "Prompt Engineering",
     issuer: "Infosys Springboard",
     date: "Jul '25",
+    image:
+      "/assets/uploads/screenshot_2025-12-12_003539_1-019d28cf-20ac-75cc-a90e-c6392e506cf5-1.png",
   },
   {
     title: "ChatGPT Prompt Engineering",
@@ -118,7 +120,13 @@ const certificates: Certificate[] = [
     image:
       "/assets/uploads/screenshot_2025-12-12_003841-019d28b2-f105-72d9-8d7b-5c643d33c787-1.png",
   },
-  { title: "Object Oriented Programming", issuer: "LPU", date: "Jun '25" },
+  {
+    title: "Object Oriented Programming",
+    issuer: "LPU",
+    date: "Jun '25",
+    image:
+      "/assets/uploads/screenshot_2025-12-12_003346-019d28c0-6b71-74b0-a24b-07fbda475739-1.png",
+  },
   { title: "DSA in C++", issuer: "Training", date: "May–Jun '25" },
 ];
 
@@ -342,8 +350,6 @@ function NavBar({
           >
             Get in Touch
           </a>
-
-          <ThemeToggle dark={dark} toggle={toggleTheme} />
         </div>
 
         {/* Mobile right */}
@@ -351,7 +357,6 @@ function NavBar({
           style={{ display: "flex", alignItems: "center", gap: 10 }}
           className="flex md:hidden"
         >
-          <ThemeToggle dark={dark} toggle={toggleTheme} />
           <button
             type="button"
             data-ocid="nav.toggle"
@@ -407,6 +412,7 @@ function NavBar({
             />
           </button>
         </div>
+        <ThemeToggle dark={dark} toggle={toggleTheme} />
       </nav>
 
       {/* Mobile menu */}
